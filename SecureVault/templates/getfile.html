@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="File" content="Secured file">
+    <title>Your Files</title>
+    <link rel="stylesheet" href="{% static 'css/getfile.css' %}">
+</head>
+<body>
+
+    <section class="glass-container">
+        
+        <h1>Files Found!</h1>
+        <p class="subtitle">We successfully retrieved your data using the key provided.</p>
+
+        <div class="instruction-panel">
+            <p class="instruction-title">✔ Download Ready</p>
+            <p>
+                Below are the files associated with your key. You can download them individually. 
+                These are the <b>original files</b> in the format you submitted.
+            </p>
+        </div>
+        
+        <h3>Available Files:</h3>
+
+        <div class="file-list">
+            
+            <div class="file-item">
+                <span class="file-name">📄 confidential_report.pdf</span>
+                <a href="#" class="download-btn">Download</a>
+            </div>
+
+            <div class="file-item">
+                <span class="file-name">🖼 image_evidence.png</span>
+                <a href="#" class="download-btn">Download</a>
+            </div>
+
+        </div>
+
+        <br>
+        <a href="{% url 'uploadkey' %}" class="back-link">Retrieve a different file</a>
+
+    </section>
+
+</body>
+</html>

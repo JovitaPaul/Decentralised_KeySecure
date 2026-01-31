@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureVault | Data Privacy</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+
+    <nav>
+        <section class="logo">SecureVault</section>
+        
+        <section class="nav-links">
+            <a href="{% url 'profile' %}">My Profile</a>
+            <a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'upload_file' %}">Upload</a>
+            <a href="{% url 'upload_key' %}">Retrieve</a>
+        </section>
+    </nav>
+
+    <header class="hero-section">
+        <h1>Zero Knowledge.<br>Absolute Privacy.</h1>
+        <p>
+            Welcome to the future of data sovereignty. We utilize a proprietary blend 
+            of <strong>cryptographic protocols</strong> and <strong>decentralized fragmentation</strong> 
+            to secure your digital assets. We don't just lock your files; we shatter them 
+            and scatter the pieces across a secure network.
+            <br><br>
+            Your data is recoverable only by you, using a unique key generated on your device.
+        </p>
+    </header>
+
+    <section id="about" class="info-section">
+        <h2>The Architecture of Security</h2>
+        
+        <section class="feature-container">
+            <section class="feature-box">
+                <h3>1. Client-Side Locking</h3>
+                <p>
+                    Security starts on your device. Your files are locked securely before they 
+                    ever leave your computer. This ensures that even our administrators 
+                    cannot view your raw data.
+                </p>
+            </section>
+
+            <section class="feature-box">
+                <h3>2. Data Fragmentation</h3>
+                <p>
+                    We split your locked data into unrecognizable "shards." These shards are 
+                    distributed across independent storage nodes. A breach of one server 
+                    yields only meaningless fragments, not your file.
+                </p>
+            </section>
+
+            <section class="feature-box">
+                <h3>3. Digital Camouflage</h3>
+                <p>
+                    To prevent detection, your data fragments are embedded within ordinary 
+                    digital assets. Your sensitive information effectively disappears into 
+                    the digital noise of the internet.
+                </p>
+            </section>
+        </section>
+    </section>
+
+    <section class="action-section">
+        <h2>Secure Your Data Now</h2>
+        <p>Begin the process or get your data back.</p>
+        
+        <section class="cta-container">
+            <a href="{% url 'upload_file' %}" class="btn-primary">Get Started (Upload)</a>
+            <a href="{% url 'upload_key' %}" class="btn-secondary">Retrieve Data</a>
+
+        </section>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 SecureVault Project. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
