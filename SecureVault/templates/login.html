@@ -1,13 +1,11 @@
-<!DOCTYPE html>
+{% extends 'layout.html' %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   {% block title %}
     <title>Login</title>
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
-</head>
-<body>
+    {% endblock %}
+      {% block content%}
+<div class="login-wrapper">
 
     <header>
         <h1>Welcome !!</h1>
@@ -35,6 +33,6 @@
             </fieldset>
         </form>
     </main>
+</div>
     
-</body>
-</html>
+    {% endblock %}

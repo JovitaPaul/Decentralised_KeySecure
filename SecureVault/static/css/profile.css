@@ -5,17 +5,10 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
 
-body {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    color: white;
-}
+/* DON'T style body here - it interferes with navbar from base.css */
+/* Instead, we'll use a wrapper div in the HTML */
 
-/* BACKGROUND ANIMATION */
+/* BACKGROUND ANIMATION - kept for profile page */
 body::before, body::after {
     content: '';
     position: absolute;
@@ -32,6 +25,15 @@ body::after { background: #3a7bd5; bottom: 5%; right: 10%; animation: float 8s e
 @keyframes float {
     0%, 100% { transform: translate(0, 0); }
     50% { transform: translate(20px, 40px); }
+}
+
+/* PROFILE PAGE WRAPPER - This centers the glass container without affecting navbar */
+.profile-wrapper {
+    min-height: calc(100vh - 80px); /* Account for navbar height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 /* MAIN CARD */

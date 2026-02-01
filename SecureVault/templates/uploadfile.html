@@ -1,14 +1,11 @@
-<!DOCTYPE html>
+{% extends 'layout.html' %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="Upload" content="Upload your File">
+   {% block title %}
     <title>Upload File</title>
     <link rel="stylesheet" href="{% static 'css/uploadfile.css' %}">
-</head>
-<body>
-
+{% endblock %}
+{% block content%}
+<div class="page-wrapper">
     <section id="upload-section">
         
         <h1>Upload File</h1>
@@ -34,6 +31,6 @@
         </form>
 
     </section>
+</div>
+    {% endblock %}
 
-</body>
-</html>

@@ -8,15 +8,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    min-height: 100vh;
+.page-wrapper {
+    min-height: calc(100vh - 80px); /* Account for navbar */
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     padding: 20px;
-    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* 2. BACKGROUND ANIMATIONS */

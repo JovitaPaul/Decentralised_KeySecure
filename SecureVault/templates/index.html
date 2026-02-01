@@ -1,25 +1,12 @@
-<!DOCTYPE html>
-{%load static%}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{% extends 'layout.html' %}
+{% load static %}
+    {% block title %}
     <title>SecureVault | Data Privacy</title>
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
-</head>
-<body>
+    {% endblock %}
 
-    <nav>
-        <section class="logo">SecureVault</section>
-        
-        <section class="nav-links">
-            <a href="{% url 'profile' %}">My Profile</a>
-            <a href="{% url 'login' %}">Login</a>
-            <a href="{% url 'upload_file' %}">Upload</a>
-            <a href="{% url 'upload_key' %}">Retrieve</a>
-        </section>
-    </nav>
-
+     {% block content%}
     <header class="hero-section">
         <h1>Zero Knowledge.<br>Absolute Privacy.</h1>
         <p>
@@ -79,6 +66,4 @@
     <footer>
         <p>&copy; 2026 SecureVault Project. All Rights Reserved.</p>
     </footer>
-
-</body>
-</html>
+    {% endblock %}

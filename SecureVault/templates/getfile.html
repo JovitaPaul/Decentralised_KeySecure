@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-{%load static%}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+{% extends 'layout.html' %}
+{% load static %}
+   {% block title %}
     <meta name="File" content="Secured file">
     <title>Your Files</title>
     <link rel="stylesheet" href="{% static 'css/getfile.css' %}">
-</head>
-<body>
-
+    {% endblock %}
+      {% block content%}
+      <div class="page-wrapper">
     <section class="glass-container">
         
         <h1>Files Found!</h1>
@@ -43,5 +41,5 @@
 
     </section>
 
-</body>
-</html>
+</div>
+{% endblock %}

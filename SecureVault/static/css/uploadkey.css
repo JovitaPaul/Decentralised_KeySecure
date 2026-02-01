@@ -3,14 +3,13 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
 
-body {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    min-height: 100vh;
+.page-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 40px 20px;
     color: white;
+    min-height: calc(100vh - 73px); /* Subtract approximate navbar height */
 }
 
 /* GLASS CARD */
