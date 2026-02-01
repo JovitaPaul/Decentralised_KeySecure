@@ -16,30 +16,15 @@
 
     <main>
         <form action="{% url 'login' %}" method="post">
-    {% csrf_token %}
-    <fieldset>
-        <legend>User Login</legend>
-
-        {% if messages %}
-          {% for message in messages %}
-            <p class="error">{{ message }}</p>
-          {% endfor %}
-        {% endif %}
-
-        <p>
-            <label for="user-identifier">Username or Email:</label>
-            <input type="text" name="identifier" id="user-identifier" placeholder="Enter username or email" required autocomplete="username email">
-        </p>
-        <p>
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" placeholder="Enter password" required>
-        </p>
-        <button type="submit">Submit</button>
-
-        <p>New user? <a href="{% url 'signup' %}">Register here</a></p>
-    </fieldset>
-</form>
-
+            {% csrf_token %}
+            <fieldset>
+                <legend>User Login</legend>
+                {{form}}
+                <button type="submit">Submit</button>
+                
+                <p>New user? <a href="{% url 'signup' %}">Register here</a></p>
+            </fieldset>
+        </form>
     </main>
 </div>
     

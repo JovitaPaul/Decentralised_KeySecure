@@ -17,22 +17,7 @@
                 {% csrf_token %}
                 <fieldset>
                     <legend>Fill details to create account</legend>
-                    <p>
-                        <label for="fullname">Full Name:</label>
-                        <input type="text" name="fullname" id="fullname" placeholder="Enter Your Full Name" required>
-                    </p>
-                    <p>
-                        <label for="email">Email:</label>
-                        <input type="email" name="email" id="email" placeholder="something@gmail.com" required>
-                    </p>
-                    <p>
-                        <label for="password">New Password:</label>
-                        <input type="password" name="password" id="password" placeholder="Password" required>
-                    </p>
-                    <p>
-                        <label for="confirm_password">Re-Confirm Password:</label>
-                        <input type="password" name="confirm_password" id="confirm_password" placeholder="Retype Password" required>
-                    </p>
+                    {{form}}
                     <button type="submit">Sign Up</button>
                     <p style="margin-top: 15px;">Already have an account? <a href="{% url 'login' %}">Login</a></p>
                 </fieldset>
