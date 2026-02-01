@@ -8,20 +8,17 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Remove body flex that causes navbar gap */
 body {
     /* distinct deep gradient */
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    /* Changed to min-height to accommodate the taller form */
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     /* Allow vertical scroll if screen is short, hide horizontal */
     overflow-x: hidden;
     overflow-y: auto;
     position: relative;
-    padding: 20px 0; /* Add padding for scroll clearance */
+    margin: 0;
+    padding: 0;
 }
 
 /* 2. BACKGROUND ANIMATED BLOBS */
@@ -54,6 +51,16 @@ body::after {
 @keyframes float {
     0%, 100% { transform: translate(0, 0); }
     50% { transform: translate(20px, 40px); }
+}
+
+/* Container wrapper for content below navbar */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px); /* Subtract navbar height */
+    padding: 3rem 1rem;
 }
 
 /* 3. HEADER STYLING */
