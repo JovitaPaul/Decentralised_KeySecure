@@ -14,25 +14,37 @@
                 <div class="profile-pic">
                     <i class="fa-solid fa-user-astronaut"></i>
                 </div>
-                <h1>Alex Morgan</h1> 
+                <h1>{{ user.get_full_name|default:user.username }}</h1> 
                 <p class="status-text">Authorized User</p>
             </div>
 
             <div class="info-section">
                 <div class="info-row">
-                    <span class="label">Email Address</span>
-                    <span class="value">alex.morgan@example.com</span>
+                    <span class="label">Username</span>
+                    <span class="value">{{ user.username }}</span>
                 </div>
             </div>
 
+            {% if user.email %}
+            <div class="info-section">
+                <div class="info-row">
+                    <span class="label">Email Address</span>
+                    <span class="value">{{ user.email }}</span>
+                </div>
+            </div>
+            {% endif %}
+
             <div class="id-card">
                 <p class="id-label">YOUR UNIQUE ID</p>
-                <div class="id-number">8849 2031 5592</div>
+                <div class="id-number">{{ user_id|stringformat:"012d" }}</div>
             </div>
 
             <div class="action-buttons">
-                <button class="btn-edit">Edit Details</button> 
-                <button class="btn-logout">Log Out</button>
+                <button class="btn-edit" onclick="alert('Edit functionality coming soon!')">Edit Details</button> 
+                <form method="post" action="{% url 'logout' %}" style="flex: 1; margin: 0;">
+                    {% csrf_token %}
+                    <button type="submit" class="btn-logout" style="width: 100%;">Log Out</button>
+                </form>
             </div>
 
             <a href="{% url 'index' %}" class="back-link">Back to Home</a>
