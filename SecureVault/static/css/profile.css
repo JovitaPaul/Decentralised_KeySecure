@@ -124,7 +124,7 @@ h1 { font-size: 1.8rem; margin-bottom: 2px; text-shadow: 0 0 10px rgba(255,255,2
 button {
     flex: 1;
     padding: 12px;
-    border: none;
+    border:none;
     border-radius: 30px;
     font-weight: 600;
     cursor: pointer;
@@ -133,11 +133,11 @@ button {
 }
 
 .btn-edit {
-    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
     color: white;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(255, 75, 43, 0.3);
 }
-.btn-edit:hover { background: rgba(255, 255, 255, 0.2); }
+.btn-edit:hover { transform: scale(1.02); box-shadow: 0 0 20px rgba(255, 75, 43, 0.5);  }
 
 .btn-logout {
     background: linear-gradient(90deg, #ff416c, #ff4b2b);
